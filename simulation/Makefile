@@ -23,7 +23,7 @@ add:
 	@echo "==========================="
 	@echo "Step 1 : add file path     "
 	@echo "==========================="
-	find ../rtl/* > file.list
+	find ../rtl -type f \( -name "*.v" -o -name "*.sv" \) > file.list
 
 .PHONY: compile
 compile:
