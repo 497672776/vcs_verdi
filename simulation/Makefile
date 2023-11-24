@@ -13,7 +13,7 @@ TOP_NAME := vote_7in_tb
 
 
 .PHONY: all
-all: clean add compile wave_gen sim_no_gui run_verdi
+all: clean add compile wave_gen sim_no_gui wave
 
 .PHONY: shuaxin
 shuaxin: compile wave_gen sim_no_gui
@@ -55,8 +55,8 @@ sim_no_gui:
 	@echo "==========================="
 	./simv -ucli -i wave_gen.tcl -l sim.log
 
-.PHONY: run_verdi
-run_verdi:
+.PHONY: wave
+wave:
 	@echo "==========================="
 	@echo "Step 5 : View waveforms    "
 	@echo "==========================="
